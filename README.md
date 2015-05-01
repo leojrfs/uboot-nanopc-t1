@@ -1,34 +1,32 @@
-# 适用于Nanopc-t1的uboot
+# Nanopc-T1 u-boot
 
-## 简介
-
-## 编译
+## Compile
 
 ```
 cd uboot-nanopc-t1
 make tiny4412_config
 make
 ```
-## 烧写uboot镜像到SD卡
+## Writing u-boot image to SD card
 
-### 准备必要工具
+### Prepare the necessary tools
 
 ```
 cd sd_fuse
 make
 ```
 
-### 烧写uboot到SD卡
+### u-boot programmed to SD card
 
 ```
 cd tiny4412
 sudo ./sd_fusing.sh YOUR_SD_DEVICE #such as /dev/sdb
 ```
-## 上机测试
+## Test
 
-1. 插上SD卡，选择从SD卡启动
+1. Plug in SD card, while pressing bootmode button, turn on and then release the bootmode button.
 
-下面是启动时的终端输出:
+Terminal output example:
 
 ```
 OK
@@ -61,6 +59,7 @@ Hit any key to stop autoboot:  0
 TINY4412 #
 ```
 
-## 特别感谢
+## Special thanks to:
 
-1. wanyuhang提供的补丁: <http://www.arm9home.net/read.php?tid-83336-uid-105026.html>
+1. wanyuhang: <http://www.arm9home.net/read.php?tid-83336-uid-105026.html>
+2. halechan: <https://github.com/halechan/uboot-nanopc-t1>
